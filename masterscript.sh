@@ -211,6 +211,7 @@ function enable_firewall() {
 }
 
 function checks() {
+    source ./include/coin_master_list.conf
     if [ $EUID -ne 0 ]; then
        echo
        echo -e "${RED}Error: This script ${YELLOW}($0)${RED} must be run as root. Terminating setup...${NC}"
